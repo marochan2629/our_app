@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+header {
+    padding: 0px 30px;
+    background-color: skyblue;
+    .header-logo {
+        float: left;
+        font-size: 50px;
+    }
+    .header-list {
+        float: right;
+        font-size: 20px;
+        li {
+            list-style: none;
+            float: left;
+            padding: 20px 30px;
+        }
+    }
+    .clear {
+        clear: right;
+    }
+}
+
+.main-visual {
+    background-color: lime;
+    margin: 0px 100px;
+    text-align: center;
+}
+
