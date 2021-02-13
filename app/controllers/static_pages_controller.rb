@@ -7,4 +7,8 @@ class StaticPagesController < ApplicationController
 
   def login
   end
+  
+  def about_hsp
+  end
+  
 end

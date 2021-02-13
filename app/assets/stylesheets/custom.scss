@@ -3,7 +3,11 @@
 
 header {
     padding: 0px 30px;
-    background-color: skyblue;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
     .header-logo {
         float: left;
         font-size: 50px;
@@ -24,10 +28,30 @@ header {
 
 .main-visual {
     background-color: lime;
-    margin: 0px 100px;
     text-align: center;
+    padding-top: 70px;
+}
+
+.container {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: 100%;
 }
 
 #logo {
     color: black;
+}
+
+.services {
+    text-align: center;
+}
+
+.service {
+    float: left;
+    padding: 30px 116px;
+    text-align: center;
+}
+
+.footer-contents {
+    float: left;
 }

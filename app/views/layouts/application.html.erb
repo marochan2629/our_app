@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OurApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <title><%= yield(:title) %> | Pax</title>
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
-        <%= link_to "Pax", "#", id: "logo" %>
-      </div>
-      <div class="header-list">
-        <ul>
-          <li><%= link_to "ログイン", "#" %></li>
-          <li><%= link_to "新規登録", "#" %></li>
-          <li><%= link_to "繊細さんって？", "#" %></li>
-        </ul>
-      </div>
-      <div class="clear"></div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
     <%= yield %>
+    <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
