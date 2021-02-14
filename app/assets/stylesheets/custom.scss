@@ -69,10 +69,6 @@ input {
   height: auto !important;
 }
 
-.signup_page {
-    padding-top: 70px;
-}
-
 #error_explanation {
   color: red;
   ul {
@@ -86,4 +82,15 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.forms {
+    margin-top: 70px;
+    // border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 25%;
+    width: 100%;
+    .form {
+        width: 50%;
+    }
 }
