@@ -1,12 +1,12 @@
-<% provide(:title, "Sign up") %>
+<% provide(:title, "法人登録") %>
 <div class="signup forms">
   <h1>新規登録</h1>
 
   <div class="form">
-    <%= form_with(model: @user, local: true) do |f| %>
-    <%= render 'shared/user_error_messages' %>
+    <%= form_with(model: @facility, local: true) do |f| %>
+    <%= render 'shared/facility_error_messages' %>
       
-    <%= f.label :name, "ニックネーム" %>
+    <%= f.label :name, "名前" %>
     <%= f.text_field :name, class: 'form-control' %>
     
     <%= f.label :email, "メールアドレス" %>
