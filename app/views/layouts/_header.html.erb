@@ -4,7 +4,7 @@
       </div>
       <div class="header-list">
         <ul>
-          <li><%= link_to "繊細さんって？", "about_hsp" %></li>
+          <li><%= link_to "繊細さんって？", about_hsp_path %></li>
           <% if user_logged_in? %>
           <li><%= link_to "お気に入りを探す", '#' %></li>
           <li class="dropdown">
@@ -22,7 +22,7 @@
           </li>
           <% elsif facility_logged_in? %>
             <li><%= link_to "施設一覧", '#' %></li>
-            <li><%= link_to "マイページ更新", current_user %></li>
+            <li><%= link_to "マイページ更新", "current_user" %></li>
             <li><%= link_to "ログアウト", facilities_logout_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "新規登録", signup_path %></li>

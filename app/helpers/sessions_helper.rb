@@ -5,7 +5,7 @@ module SessionsHelper
   end
   
   def facility_log_in(facilty)
-    session[:user_id] = user.id
+    session[:facility_id] = facility.id
   end
   
   # 現在ログイン中のユーザーを返す（いる場合）
@@ -17,7 +17,7 @@ module SessionsHelper
   
   def current_facility
     if session[:facility_id]
-      @current_facility ||= Facility.find_by(id: session[:user_id])
+      @current_facility ||= Facility.find_by(id: session[:facility_id])
     end
   end
   
