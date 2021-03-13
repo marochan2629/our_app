@@ -21,7 +21,7 @@
             </ul>
           </li>
           <% elsif facility_logged_in? %>
-            <li><%= link_to "施設一覧", '#' %></li>
+            <li><%= link_to "施設一覧", "#" %></li>
             <li><%= link_to "マイページ更新", "current_user" %></li>
             <li><%= link_to "ログアウト", facilities_logout_path, method: :delete %></li>
           <% else %>

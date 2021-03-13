@@ -1,6 +1,6 @@
-<% provide(:title, "Log in") %>
+<% provide(:title, "Facility Log in") %>
 <div class="login forms">
-  <h1>Log in</h1>
+  <h1>Facility Log in</h1>
 
     <div class="form">
       <%= form_with(url: facilities_login_path, scope: :session, local: true) do |f| %>
@@ -14,6 +14,6 @@
         <%= f.submit "Log in", class: "btn btn-primary" %>
       <% end %>
 
-      <p>未登録の方は <%= link_to "こちらから", facilities_signup_path %></p>
+      <p>未登録の方 <%= link_to "こちらから", facilities_signup_path %></p>
     </div>
 </div>

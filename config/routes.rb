@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  
+  #施設管理ユーザーのログイン用ルーティング
   # get 'facilities/new'
   get  '/facilities_signup',  to: 'facilities#new'
-  get    '/facilities_login',   to: 'sessions#new'
+  get    '/facilities_login',   to: 'sessions#facilities_new'
   post   '/facilities_login',   to: 'sessions#facilities_create'
   delete '/facilities_logout',  to: 'sessions#facility_destroy'
+  
+  #一般ユーザーのログイン用ルーティング
   get 'users/new'
   get '/home', to:'static_pages#home'
   # get '/login', to:'static_pages#login'
@@ -13,6 +17,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#user_destroy'
+ 
   resources :users
   resources :facilities
 end

@@ -4,7 +4,7 @@ module SessionsHelper
     session[:user_id] = user.id
   end
   
-  def facility_log_in(facilty)
+  def facility_log_in(facility)
     session[:facility_id] = facility.id
   end
   
