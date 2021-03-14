@@ -14,10 +14,16 @@ Rails.application.routes.draw do
   # get '/login', to:'static_pages#login'
   get '/about_hsp', to:'static_pages#about_hsp'
   get '/signup', to:'users#new'
+  
+  
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#user_destroy'
+  
+  #施設登録用ルーティング
+  get '/add_my_facilities', to: 'my_facilities#add_my_facilities'
  
   resources :users
   resources :facilities
+  resources :my_facilities
 end

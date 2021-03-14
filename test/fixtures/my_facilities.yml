@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  facility_name: MyString
+  branch_name: MyString
+  kana: MyString
+  category: MyString
+  address: MyString
+  phone_number: MyString
+  email: MyString
+  services: MyString
+  top_image: MyString
+  other_image: MyString
+  opening_days: MyString
+  opening_hours: MyString
+  access: MyString
+  parking_lot: 1
+  seats: 1
+  details: MyText
+  facility: one
+
+two:
+  facility_name: MyString
+  branch_name: MyString
+  kana: MyString
+  category: MyString
+  address: MyString
+  phone_number: MyString
+  email: MyString
+  services: MyString
+  top_image: MyString
+  other_image: MyString
+  opening_days: MyString
+  opening_hours: MyString
+  access: MyString
+  parking_lot: 1
+  seats: 1
+  details: MyText
+  facility: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_28_035946) do
+ActiveRecord::Schema.define(version: 2021_03_13_022428) do
 
   create_table "facilities", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,29 @@ ActiveRecord::Schema.define(version: 2021_02_28_035946) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.index ["email"], name: "index_facilities_on_email", unique: true
+  end
+
+  create_table "my_facilities", force: :cascade do |t|
+    t.string "facility_name"
+    t.string "branch_name"
+    t.string "kana"
+    t.string "category"
+    t.string "address"
+    t.string "phone_number"
+    t.string "email"
+    t.string "services"
+    t.string "top_image"
+    t.string "other_image"
+    t.string "opening_days"
+    t.string "opening_hours"
+    t.string "access"
+    t.integer "parking_lot"
+    t.integer "seats"
+    t.text "details"
+    t.integer "facility_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["facility_id"], name: "index_my_facilities_on_facility_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,4 +55,5 @@ ActiveRecord::Schema.define(version: 2021_02_28_035946) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "my_facilities", "facilities"
 end

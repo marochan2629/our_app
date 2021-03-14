@@ -1,0 +1,2 @@
+module MyFacilitiesHelper
+end

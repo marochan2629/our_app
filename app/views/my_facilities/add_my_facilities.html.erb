@@ -1,0 +1,61 @@
+<% provide(:title, "施設登録") %>
+<div class="main">
+  <h1>新規施設登録</h1>
+  
+  <div class="form">
+    <%= form_with(model: @my_facility, local: true) do |f| %>
+      
+      <%= f.label :name, "施設名" %>
+      <%= f.text_field :name, class: 'form-control' %>
+    
+      <%= f.label :branch_name, "支店名" %>
+      <%= f.text_field :branch_name, class: 'form-control' %>
+
+      <%= f.label :kana, "ヨミガナ" %>
+      <%= f.text_field :kana, class: 'form-control' %>
+      
+      <%= f.label :category, "施設カテゴリー" %>
+      <%= f.select :category,
+        [["飲食店", "飲食店"], ["公園", "公園"], ["図書館", "図書館"], ["神社・お寺", "神社・お寺"],
+        ["美術館・博物館", "美術館・博物館"], ["その他", "その他"]], include_blank: "選択して下さい"%>
+    
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address, class: 'form-control' %>
+    
+      <%= f.label :access, "アクセス" %>
+      <%= f.text_field :access, class: 'form-control' %>
+    
+      <%= f.label :phone_number, "電話番号" %>
+      <%= f.text_field :address, class: 'form-control' %>
+    
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.email_field :email, class: 'form-control' %>
+    
+      <%= f.label :services, "サービス概要" %>
+      <%= f.text_field :services, class: 'form-control' %>
+    
+      <%= f.label :img, "トップ画像" %>
+      <%= f.file_field :img, id: :book_img %>
+    
+      <%= f.label :other_img, "その他イメージ画像を登録してもらおうと思ったけど、この時点では必要ないかもしれないので保留" %>
+      <%= f.text_field :other_img, class: 'form-control' %>
+    
+      <%= f.label :opening_days, "営業日" %>
+      <%= f.text_field :opening_days, class: 'form-control' %>
+    
+      <%= f.label :opening_hours, "営業時間" %>
+      <%= f.text_field :opening_hours, class: 'form-control' %>
+    
+      <%= f.label :parking_lot, "駐車場の数（半角数字）" %>
+      <%= f.text_field :sparking_lot, class: 'form-control' %>
+    
+      <%= f.label :seats, "座席数（半角数字）" %>
+      <%= f.text_field :seats, class: 'form-control' %>
+    
+      <%= f.label :details, "施設詳細" %>
+      <%= f.text_field :details, class: 'form-control' %>
+
+      <%= f.submit "登録", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

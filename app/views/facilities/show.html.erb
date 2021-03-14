@@ -1,1 +1,19 @@
-<%= @facility.name %>, <%= @facility.email %>
+<% provide(:title, @facility.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @facility.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @facility.my_facilities.any? %>
+      <h3>My facilities (<%= @facility.my_facilities.count %>)</h3>
+      <ol class="microposts">
+        <%= render @my_facilities %>
+      </ol>
+      <%= will_paginate @my_facilities %>
+    <% end %>
+  </div>
+</div>
