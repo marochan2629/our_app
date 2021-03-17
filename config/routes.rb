@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   
   #施設登録用ルーティング
   get '/add_my_facilities', to: 'my_facilities#add_my_facilities'
+  post   '/add_my_facilities',   to: 'my_facilities#create'
  
   resources :users
   resources :facilities

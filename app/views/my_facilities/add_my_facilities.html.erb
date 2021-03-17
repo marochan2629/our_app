@@ -5,8 +5,8 @@
   <div class="form">
     <%= form_with(model: @my_facility, local: true) do |f| %>
       
-      <%= f.label :name, "施設名" %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :facility_name, "施設名" %>
+      <%= f.text_field :facility_name, class: 'form-control' %>
     
       <%= f.label :branch_name, "支店名" %>
       <%= f.text_field :branch_name, class: 'form-control' %>
@@ -26,7 +26,7 @@
       <%= f.text_field :access, class: 'form-control' %>
     
       <%= f.label :phone_number, "電話番号" %>
-      <%= f.text_field :address, class: 'form-control' %>
+      <%= f.text_field :phone_number, class: 'form-control' %>
     
       <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
@@ -34,11 +34,11 @@
       <%= f.label :services, "サービス概要" %>
       <%= f.text_field :services, class: 'form-control' %>
     
-      <%= f.label :img, "トップ画像" %>
-      <%= f.file_field :img, id: :book_img %>
+      <%= f.label :top_image, "トップ画像" %>
+      <%= f.file_field :top_image, id: :top_image %>
     
-      <%= f.label :other_img, "その他イメージ画像を登録してもらおうと思ったけど、この時点では必要ないかもしれないので保留" %>
-      <%= f.text_field :other_img, class: 'form-control' %>
+      <%= f.label :other_image, "その他イメージ画像を登録してもらおうと思ったけど、この時点では必要ないかもしれないので保留" %>
+      <%= f.text_field :other_image, class: 'form-control' %>
     
       <%= f.label :opening_days, "営業日" %>
       <%= f.text_field :opening_days, class: 'form-control' %>
@@ -47,7 +47,7 @@
       <%= f.text_field :opening_hours, class: 'form-control' %>
     
       <%= f.label :parking_lot, "駐車場の数（半角数字）" %>
-      <%= f.text_field :sparking_lot, class: 'form-control' %>
+      <%= f.text_field :parking_lot, class: 'form-control' %>
     
       <%= f.label :seats, "座席数（半角数字）" %>
       <%= f.text_field :seats, class: 'form-control' %>
