@@ -8,3 +8,28 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード（再入力）
+        
+ja:
+  activerecord:
+    models:
+      facility: 施設管理ユーザー
+    attributes:
+      facility:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（再入力）
+        
+ja:
+  activerecord:
+    models:
+      my_facility: 施設管理ユーザー
+    attributes:
+      my_facility:
+        facility_name: 施設名
+        email: メールアドレス
+        kana: ヨミガナ
+        category: カテゴリ
+        address: 住所
+        top_image: トップ画像
+        phone_number: 電話番号

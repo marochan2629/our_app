@@ -21,10 +21,13 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#user_destroy'
   
   #施設登録用ルーティング
-  get '/add_my_facilities', to: 'my_facilities#add_my_facilities'
+  get '/add_my_facilities', to: 'my_facilities#new'
   post   '/add_my_facilities',   to: 'my_facilities#create'
+  
+  #static_pages用ルーティング
+  get '/about_pax', to:'static_pages#about_pax'
  
   resources :users
   resources :facilities
-  resources :my_facilities
+  resources :my_facilities, only:[:create, :destroy]
 end

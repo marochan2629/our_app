@@ -4,6 +4,7 @@
   
   <div class="form">
     <%= form_with(model: @my_facility, local: true) do |f| %>
+    <%= render 'shared/my_facility_error_messages' %>
       
       <%= f.label :facility_name, "施設名" %>
       <%= f.text_field :facility_name, class: 'form-control' %>
