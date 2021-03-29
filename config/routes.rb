@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   
   #施設登録用ルーティング
   get '/add_my_facilities', to: 'my_facilities#new'
+  get '/facilities_show', to: 'facilities#show'
   post   '/add_my_facilities',   to: 'my_facilities#create'
   
   #static_pages用ルーティング

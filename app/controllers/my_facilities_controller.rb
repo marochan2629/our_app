@@ -12,8 +12,8 @@ class MyFacilitiesController < ApplicationController
   def create
     @my_facility = current_facility.my_facilities.build(my_facility_params)
     if @my_facility.save
-      flash[:success] = "施設登録しました"
-      redirect_to root_url
+      flash[:success] = "施設を登録しました"
+      redirect_to @facility
     else
       render 'new'
     end
@@ -22,9 +22,9 @@ class MyFacilitiesController < ApplicationController
   private
 
     def my_facility_params
-      params.permit(:facility_name, :branch_name, :kana, :category,
-                                       :address, :phone_number, :email, :services, :top_image, 
-                                       :other_image, :opening_days, :opening_hours, :access, 
-                                       :parking_lot, :seats, :details)
+      params.require(:my_facility).permit(:facility_name, :branch_name, :kana, :category,
+                                          :address, :phone_number, :email, :services, :top_image, 
+                                          :other_image, :opening_days, :opening_hours, :access, 
+                                          :parking_lot, :seats, :details)
     end
 end
