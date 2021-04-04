@@ -5,6 +5,7 @@ class FacilitiesController < ApplicationController
   
   def show
     @facility = Facility.find(params[:id])
+    p "@facilityの確認：：：：：：#{@facility}"
     @my_facilities = @facility.my_facilities.paginate(page: params[:page])
   end
   
