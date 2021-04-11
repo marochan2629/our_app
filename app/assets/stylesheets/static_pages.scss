@@ -1,3 +1,74 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-visual {
+    width: 100%;
+    text-align: center;
+    // padding-top: 70px;
+}
+
+.main-visual-top-img {
+    background-image: image-url('4228050_m.jpg');
+    height: 500px;
+    background-position:center center;  
+    background-size: cover;
+    // width: 100%;
+}
+
+.main-visual-inner {
+  font-size: 60px;
+  position:absolute; 
+  left: 0;
+  right: 0;
+  top: 300px;
+  margin: auto;
+  z-index: 2; 
+  color: #F5F5F5;
+  line-height: 50px;
+  font-size: 30px;
+  font-family: 'HiraKakuProN-W6';
+  // position: absolute;
+}
+
+.service-outline {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.services h1 {
+  padding-bottom: 30px;
+}
+
+.service {
+    float: left;
+    padding: 30px 116px;
+    text-align: center;
+    background-color: black;
+}
+
+.service-img {
+  width: 100px;
+}
+
+.facility-img {
+  max-width: 100%;
+}
+
+.facilities {
+  width: 100%;
+}
+
+.facility {
+  padding: 0px 100px;
+}
+
+.contents {
+    text-align: center;
+    width: 33%;
+    float: left;
+}
+
+.btn-link {
+  box-sizing: inherit;
+}

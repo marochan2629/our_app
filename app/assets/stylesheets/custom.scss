@@ -26,33 +26,24 @@ header {
     }
 }
 
-.main-visual {
-    background-color: lime;
-    text-align: center;
-    padding-top: 70px;
-}
 
-.container {
-    margin: 0px 0px;
+
+
+
+.containers {
+    // margin: 0px 0px;
     padding-top: 50px;
-    padding-right: 150px;
-    padding-left: 150px;
-    width: 100%;
+    background-color: black;
+    // padding-right: 150px;
+    // padding-left: 150px;
+    // width: 100%;
 }
 
 #logo {
     color: black;
 }
 
-.services {
-    text-align: center;
-}
 
-.service {
-    float: left;
-    padding: 30px 66px;
-    text-align: center;
-}
 
 .footer-contents {
     float: left;
@@ -96,3 +87,4 @@ input {
         width: 50%;
     }
 }
+

@@ -13,7 +13,7 @@ class MyFacilitiesController < ApplicationController
     @my_facility = current_facility.my_facilities.build(my_facility_params)
     if @my_facility.save
       flash[:success] = "施設を登録しました"
-      redirect_to @facility
+      redirect_to current_facility
     else
       render 'new'
     end
