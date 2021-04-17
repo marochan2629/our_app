@@ -44,7 +44,7 @@
     float: left;
     padding: 30px 116px;
     text-align: center;
-    background-color: black;
+    // background-color: black;
 }
 
 .service-img {
@@ -52,7 +52,8 @@
 }
 
 .facility-img {
-  max-width: 100%;
+  width: 250px;
+  padding-top: 20px;
 }
 
 .facilities {
@@ -65,8 +66,10 @@
 
 .contents {
     text-align: center;
-    width: 33%;
+    width: 300px;
     float: left;
+    margin: 30px 50px;
+    border: solid 1px #DDDDDD;
 }
 
 .btn-link {

@@ -11,6 +11,10 @@ header {
     .header-logo {
         float: left;
         font-size: 50px;
+        .Editlink {
+            text-decoration: none;
+            color: black;
+        }
     }
     .header-list {
         float: right;
@@ -33,7 +37,7 @@ header {
 .containers {
     // margin: 0px 0px;
     padding-top: 50px;
-    background-color: black;
+    // background-color: black;
     // padding-right: 150px;
     // padding-left: 150px;
     // width: 100%;
@@ -44,10 +48,16 @@ header {
 }
 
 
-
-.footer-contents {
-    float: left;
+footer {
+    clear: left;
+    padding-top: 50px;
+    .footer-contents {
+        float: left;
+        margin: 0px 120px;
+    }
 }
+
+
 
 /* forms */
 
