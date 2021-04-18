@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.Editlink {
+    text-decoration: none;
+}
+
 header {
     padding: 0px 30px;
     background-color: white;
@@ -13,16 +17,24 @@ header {
         font-size: 50px;
         .Editlink {
             text-decoration: none;
-            color: black;
         }
     }
     .header-list {
         float: right;
         font-size: 20px;
+        .Editlink {
+            text-decoration: none;
+        }
         li {
             list-style: none;
             float: left;
             padding: 20px 30px;
+        }
+        .dropdown a {
+            .Editlink {
+                text-decoration: none;
+            }
+            
         }
     }
     .clear {
@@ -54,6 +66,9 @@ footer {
     .footer-contents {
         float: left;
         margin: 0px 120px;
+        .Editlink {
+            text-decoration: none;
+        }
     }
 }
 
