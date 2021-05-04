@@ -21,12 +21,12 @@
             </ul>
           </li>
           <% elsif facility_logged_in? %>
-            <li><%= link_to "施設登録", add_my_facilities_path %></li>
-            <li><%= link_to "マイページ", facility_path(id: current_facility.id) %></li>
-            <li><%= link_to "ログアウト", facilities_logout_path, method: :delete %></li>
+            <li><%= link_to "施設登録", add_my_facilities_path, class: "Editlink" %></li>
+            <li><%= link_to "マイページ", facility_path(id: current_facility.id), class: "Editlink" %></li>
+            <li><%= link_to "ログアウト", facilities_logout_path, method: :delete, class: "Editlink" %></li>
           <% else %>
-            <li><%= link_to "新規登録", signup_path %></li>
-            <li><%= link_to "ログイン", login_path %></li>
+            <li><%= link_to "新規登録", signup_path, class: "Editlink" %></li>
+            <li><%= link_to "ログイン", login_path, class: "Editlink" %></li>
           <% end %>
         </ul>
       </div>

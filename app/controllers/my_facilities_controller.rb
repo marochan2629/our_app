@@ -19,6 +19,11 @@ class MyFacilitiesController < ApplicationController
     end
   end
   
+  def restraunt_index
+    @my_facilities = MyFacility.all
+  end
+
+  
   private
 
     def my_facility_params

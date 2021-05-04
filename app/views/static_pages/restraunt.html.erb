@@ -1,0 +1,9 @@
+<h1>All My Facilities</h1>
+
+<ul class="MyFacility">
+  <% @my_facility.each do |my_facility| %>
+    <li>
+      <%= link_to my_facility.name, my_facility %>
+    </li>
+  <% end %>
+</ul>

@@ -99,9 +99,17 @@ header {
 footer {
     clear: left;
     padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
     .footer-contents {
-        float: left;
-        margin: 0px 120px;
+        width: 33.3%;
+        text-align: center;
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+        // float: left;
+        // margin: 0px 120px;
         .Editlink {
             text-decoration: none;
             color: #5a5858;
@@ -155,3 +163,14 @@ input {
     }
 }
 
+/* Users index */
+
+.MyFacility {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}

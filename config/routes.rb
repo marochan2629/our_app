@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   
   #static_pages用ルーティング
   get '/about_pax', to:'static_pages#about_pax'
+  
+  
+  get '/restraunt', to:'my_facilities#restraunt_index'
  
   resources :users
   resources :facilities

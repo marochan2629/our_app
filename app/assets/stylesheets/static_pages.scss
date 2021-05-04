@@ -34,17 +34,19 @@
 .service-outline {
     text-align: center;
     padding-top: 70px;
+    flex-wrap: wrap;
+    .service {
+      width: 33.3%;
+      float: left;
+      padding-bottom: 30px;
+      padding-top: 30px;
+      // text-align: center;
+      // background-color: black;
+    }
 }
 
 .services h1 {
   padding-bottom: 30px;
-}
-
-.service {
-    float: left;
-    padding: 30px 116px;
-    text-align: center;
-    // background-color: black;
 }
 
 .service-img {
@@ -56,12 +58,16 @@
   padding-top: 20px;
 }
 
-  .facilities {
+.facilities {
     width: 100%;
-}
-
-.facility {
-  padding: 0px 100px;
+    .facility {
+      flex-wrap: wrap;
+      // padding: 0px 100px;
+      .rain {
+        width: 26%;
+        // float: left;
+      }
+    }
 }
 
 .rain {
