@@ -82,3 +82,40 @@
 .btn-link {
   box-sizing: inherit;
 }
+
+// HSPとはのページ
+
+.first_section {
+    // height: 790px;
+    margin: 0px 7%;
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .sentence {
+        height: 100%;             /* 高さ指定 */
+        width:  50%;                /* 幅指定 */
+        padding:  2%;               /* 余白指定 */
+        float: left;
+        box-sizing: content-box;
+        h1 {
+            font-size: 1.9vw;
+            font-family: "Tsukushi A Round Gothic";
+            font-weight: bold;
+        }
+        p {
+            font-size: 1vw;
+            font-family: "Tsukushi A Round Gothic";
+        }
+    }
+    .first-img {
+        height:  100%;             /* 高さ指定 */
+        width:  41%;                /* 幅指定 */
+        padding:  2%;               /* 余白指定 */
+        float: right;
+        box-sizing: content-box;
+        vertical-align: middle;
+        // display: inline-block;
+    }
+}
+
