@@ -119,3 +119,32 @@
     }
 }
 
+.second_section {
+    // height: 790px;
+    margin: 0px 7%;
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .second-img {
+        height:  100%;             /* 高さ指定 */
+        width:  41%;                /* 幅指定 */
+        padding:  2%;               /* 余白指定 */
+        float: left;
+        box-sizing: content-box;
+        vertical-align: middle;
+        // display: inline-block;
+    }
+    .second_sentence {
+        // height: 100%;             /* 高さ指定 */
+        // width:  50%;                /* 幅指定 */
+        // padding:  2%;               /* 余白指定 */
+        // float: right;
+        box-sizing: content-box;
+        p {
+            font-size: 1vw;
+            font-family: "Tsukushi A Round Gothic";
+        }
+    }
+}
+

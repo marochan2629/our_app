@@ -21,6 +21,8 @@ class MyFacilitiesController < ApplicationController
   
   def restraunt_index
     @my_facilities = MyFacility.all
+    # binding.pry
+    # p @my_facilities.first.facility_name
   end
 
   
