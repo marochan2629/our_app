@@ -1,3 +1,3 @@
-class Book < ApplicationRecord
+class MyFacility < ApplicationRecord
 　mount_uploader :img, ImgUploader
 end
