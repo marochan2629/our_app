@@ -20,7 +20,7 @@ class MyFacilitiesController < ApplicationController
   end
   
   def restraunt_index
-    @my_facilities = MyFacility.all
+    @my_facilities = MyFacility.where(category: "飲食店")
     # binding.pry
     # p @my_facilities.first.facility_name
   end

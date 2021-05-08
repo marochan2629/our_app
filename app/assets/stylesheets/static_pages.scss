@@ -148,3 +148,14 @@
     }
 }
 
+.Pax_section {
+    margin: 0px 8%;
+    font-family: 'Times New Roman';
+    // font-weight: 400;
+    text-align: center;
+    .glasslands-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}

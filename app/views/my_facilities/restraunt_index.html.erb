@@ -1,7 +1,10 @@
 <ul class="restraunt">
   <% @my_facilities.each do |restraunt| %>
+  <div>
     <li>
-      <%= link_to @my_facilities.name, restraunt %>
+      <%= link_to restraunt.facility_name, restraunt %>
+      <%= link_to restraunt.top_image, restraunt %>
     </li>
+  </div>
   <% end %>
 </ul>
