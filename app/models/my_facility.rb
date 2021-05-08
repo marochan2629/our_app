@@ -1,5 +1,5 @@
 class MyFacility < ApplicationRecord
-  mount_uploader :top_image, ImgUploader
+  mount_uploader :top_image, ImageUploader
   belongs_to :facility
   default_scope -> { order(created_at: :desc) }
   with_options presence: true do
