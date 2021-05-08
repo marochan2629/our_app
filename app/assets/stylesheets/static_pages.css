@@ -4,7 +4,7 @@
   text-align: center; }
 
 .main-visual-top-img {
-  background-image: image-url("4228050_m.jpg");
+  background-image: url("4228050_m.jpg");
   height: 500px;
   background-position: center center;
   background-size: cover; }
