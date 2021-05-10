@@ -1,10 +1,16 @@
-<ul class="restraunt">
-  <% @my_facilities.each do |restraunt| %>
-  <div>
-    <li>
-      <%= link_to restraunt.facility_name, restraunt %>
-      <%= link_to restraunt.top_image, restraunt %>
-    </li>
+<div class="restraunts">
+  <div class="restraunt">
+    <div class="main_contents">
+      <% @my_facilities.each do |restraunt| %>
+        <%= image_tag restraunt.top_image.url, alt: "top_image", class:"top_image information" %>
+        <div class="details information">
+            <%= link_to restraunt.facility_name, restraunt, class:"facility_name" %>
+            <p><%= restraunt.address %></p>
+            <p><%= restraunt.opening_days %></p>
+            <p><%= restraunt.opening_hours %></p>
+        </div>
+      <% end %>
+      <div class="clear" ></div>
+    </div>
   </div>
-  <% end %>
-</ul>
+</div>

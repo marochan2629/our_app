@@ -159,3 +159,26 @@
         object-fit: cover;
     }
 }
+
+
+.main_contents{
+    border-bottom: solid 1px gray;
+    margin: 0% 20%;
+    padding: 2% 0%;
+    .main_content {
+        
+    }
+    .information {
+        float: left;
+    }
+    .top_image {
+        width: 20%;
+        border-bottom: solid 1px gray;
+    }
+    .details {
+        padding-left: 1.5vw;
+    }
+}
+.clear {
+    clear: left;
+}
