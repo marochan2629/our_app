@@ -21,8 +21,26 @@ class MyFacilitiesController < ApplicationController
   
   def restraunt_index
     @my_facilities = MyFacility.where(category: "飲食店")
-    # binding.pry
-    # p @my_facilities.first.facility_name
+  end
+  
+  def park_index
+    @my_facilities = MyFacility.where(category: "公園")
+  end
+  
+  def library_index
+    @my_facilities = MyFacility.where(category: "図書館")
+  end
+  
+  def temple_index
+    @my_facilities = MyFacility.where(category: "神社・お寺")
+  end
+  
+  def museum_index
+    @my_facilities = MyFacility.where(category: "美術館・博物館")
+  end
+  
+  def other_index
+    @my_facilities = MyFacility.where(category: "その他")
   end
 
   

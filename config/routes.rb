@@ -29,6 +29,11 @@ Rails.application.routes.draw do
   
   
   get '/restraunt', to:'my_facilities#restraunt_index'
+  get '/park', to:'my_facilities#park_index'
+  get '/library', to:'my_facilities#library_index'
+  get '/museum', to:'my_facilities#museum_index'
+  get '/temple', to:'my_facilities#temple_index'
+  get '/other', to:'my_facilities#other_index'
  
   resources :users
   resources :facilities
