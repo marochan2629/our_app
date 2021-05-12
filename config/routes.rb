@@ -27,15 +27,17 @@ Rails.application.routes.draw do
   #static_pages用ルーティング
   get '/about_pax', to:'static_pages#about_pax'
   
-  
+  #施設検索用ルーティング
   get '/restraunt', to:'my_facilities#restraunt_index'
   get '/park', to:'my_facilities#park_index'
   get '/library', to:'my_facilities#library_index'
   get '/museum', to:'my_facilities#museum_index'
   get '/temple', to:'my_facilities#temple_index'
   get '/other', to:'my_facilities#other_index'
+  
+  
  
   resources :users
   resources :facilities
-  resources :my_facilities, only:[:create, :destroy]
+  resources :my_facilities, only:[:create, :destroy, :show]
 end

@@ -1,13 +1,13 @@
 <ul class="main_contents">
   <% @my_facilities.each do |park| %>
     <li class="details">
-　          <%= image_tag park.top_image.url, alt: "top_image", class:"top_image information" %>
-　          <div>
-          <%= link_to park.facility_name, park, class:"facility_name" %><br>
-          <%= park.address %><br>
-          <%= park.opening_days %><br>
-          <%= park.opening_hours %><br>
-　          </div>
+      <%= image_tag park.top_image.url, alt: "top_image", class:"top_image information" %>
+      <div>
+        <%= link_to park.facility_name, park, class:"facility_name" %><br>
+        <%= park.address %><br>
+        <%= park.opening_days %><br>
+        <%= park.opening_hours %><br>
+      </div>
     </li>
   <% end %>
   <div class="clear" ></div>
