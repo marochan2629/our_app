@@ -9,3 +9,40 @@
 .user_info h1 {
   font-size: 50px;
 }
+
+.my_facility_pages {
+  margin: 0px 15%;
+  .sidebar {
+    width: 25%;
+    min-height:500px;
+    height: 100%;
+    background-color: #DDDDDD;
+    float:right;
+  }
+  .my_facility_about { 
+    width: 75%;
+    // min-height:500px;
+    height: 100%;
+    background-color: #B1F9D0;
+    .my_facility_pages_top_image {
+      width: 30%;
+      float: left;
+    }
+    table {
+      // border: solid 1px #ccc;/*グレーの枠線の指定*/
+      th {
+        width: 10vw;
+        height: 4vw;
+        // min-height: 2vw;
+        // display: inline-block;
+        padding: 5%;
+        border-bottom: solid 1px #ccc;/*グレーの枠線の指定*/
+      }
+      td {
+        border-bottom: solid 1px #ccc;/*グレーの枠線の指定*/
+        // min-height: 2vw;
+        width: 20vw;
+      }
+    }
+  }
+}

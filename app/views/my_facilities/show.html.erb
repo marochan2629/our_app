@@ -1,9 +1,74 @@
-<div class="row">
-  <aside class="col-md-4">
-    <section class="restraunt">
+<div class="my_facility_pages">
+  <div class="sidebar">
+    <h1>
+      <%= @my_facility.facility_name %>
+    </h1>
+  </div>
+  <div class="my_facility_about">
+    <%= image_tag @my_facility.top_image.url, alt: "top_image", class:"my_facility_pages_top_image" %>
+    <div class="rating">
       <h1>
-        <%= @my_facility.facility_name %>
+        <%= @my_facility.facility_name %> <%= @my_facility.branch_name %>
       </h1>
-    </section>
-  </aside>
-</div>
+      <div>
+        <p>★★★★☆（ここに星の数を表示する）</p>
+        <p>落ち着いた雰囲気（ここにタグを配置）</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="my_facility_about">
+    <h1>
+      ここに各施設のイメージ画像を貼る
+    </h1>
+  </div>
+  <div class="my_facility_about">
+    <h1>
+　　　ここに口コミを書く
+    </h1>
+  </div>
+  <div class="my_facility_about">
+    <table>
+    	<tr>
+    		<th>施設名</th>
+    		<td><%= @my_facility.facility_name %></td>
+    	</tr>
+    	<tr>
+    		<th>ジャンル</th>
+    		<td><%= @my_facility.category %></td>
+    	</tr>
+    	<tr>
+    		<th>住所</th>
+    		<td><%= @my_facility.address %></td>
+    	</tr>
+    	<tr>
+    		<th>アクセス</th>
+    		<td><%= @my_facility.access %></td>
+    	</tr>
+    	<tr>
+    		<th>問い合わせ</th>
+    		<td><%= @my_facility.phone_number %></td>
+    	</tr>
+    	<tr>
+    		<th>営業日</th>
+    		<td><%= @my_facility.opening_days %></td>
+    	</tr>
+    	<tr>
+    		<th>営業時間</th>
+    		<td><%= @my_facility.opening_hours %></td>
+    	</tr>
+    	<tr>
+    		<th>駐車場</th>
+    		<td><%= @my_facility.parking_lot %></td>
+    	</tr>
+    	<tr>
+    		<th>座席数</th>
+    		<td><%= @my_facility.seats %></td>
+    	</tr>
+    	<tr>
+    		<th>その他詳細</th>
+    		<td><%= @my_facility.details %></td>
+    	</tr>
+    </table>
+  </div>
+</div>  
