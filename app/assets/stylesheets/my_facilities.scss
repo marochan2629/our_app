@@ -46,3 +46,32 @@
     }
   }
 }
+
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+.star-rating-back {
+  color: #ccc;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  z-index: -1;
+}
+
+.average-score {
+  display: flex;
+  
+}
+.average-score-display {
+  font-size: 16px;
+}

@@ -1,7 +1,7 @@
 <div class="my_facility_pages">
   <div class="sidebar">
     <h1>
-      <%= @my_facility.facility_name %>
+      広告枠
     </h1>
   </div>
   <div class="my_facility_about">
@@ -11,9 +11,17 @@
         <%= @my_facility.facility_name %> <%= @my_facility.branch_name %>
       </h1>
       <div>
-        <p>★★★★☆（ここに星の数を表示する）</p>
+        <div class="content average-score">
+          <div class="star-rating mb-2">
+            <div class="star-rating-front" style="width: <%= @my_facility.review_score_percentage %> %">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <div class="average-score-display ml-3 pt-2">
+            <%= @my_facility.avg_score %>点（<%= @my_facility.reviews.count %>件のレビュー）
+          </div>
+   
+        </div>
         <p>落ち着いた雰囲気（ここにタグを配置）</p>
-         <%= render 'reviews/form', review: @review, my_facility: @my_facility %>
       </div>
     </div>
     <div class="clear"></div>
@@ -24,9 +32,9 @@
     </h1>
   </div>
   <div class="my_facility_about">
-    <h1>
-　　　ここに口コミを書く
-    </h1>
+  　<%= render 'reviews/form', review: @review, my_facility: @my_facility %>
+  　<p>ここにクチコミの一部を掲載</p>
+  　<%= link_to "他のレビューを見る", my_facility_reviews_path(@my_facility), class: "button light ml-3 mt-3" %>
   </div>
   <div class="my_facility_about">
     <table>
