@@ -1,5 +1,6 @@
 class MyFacility < ApplicationRecord
   mount_uploader :top_image, TopImageUploader
+  has_many :reviews, dependent: :destroy
   belongs_to :facility
   default_scope -> { order(created_at: :desc) }
   with_options presence: true do

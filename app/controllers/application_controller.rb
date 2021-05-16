@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     # ユーザーのログインを確認する
     def logged_in_user
       unless user_logged_in?
-        store_location
+        # store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     # 施設管理ユーザーのログインを確認する
     def logged_in_facility
       unless facility_logged_in?
-        store_location
+        # store_location いずれフレンドリーフォワーディングを実装する
         flash[:danger] = "Please log in."
         redirect_to facilities_login_url
       end

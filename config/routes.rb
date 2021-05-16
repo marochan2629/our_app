@@ -39,5 +39,7 @@ Rails.application.routes.draw do
  
   resources :users
   resources :facilities
-  resources :my_facilities, only:[:create, :destroy, :show]
+  resources :my_facilities, only:[:create, :destroy, :show] do
+    resources :reviews, only: [:index, :create]
+  end
 end
