@@ -13,8 +13,8 @@
       <div>
         <div class="content average-score">
           <div class="star-rating mb-2">
-            <div class="star-rating-front" style="width: <%= @my_facility.review_score_percentage %> %">★★★★★</div>
             <div class="star-rating-back">★★★★★</div>
+            <div class="star-rating-front" style="width: <%= @my_facility.review_score_percentage %>%">★★★★★</div>
           </div>
           <div class="average-score-display ml-3 pt-2">
             <%= @my_facility.avg_score %>点（<%= @my_facility.reviews.count %>件のレビュー）
