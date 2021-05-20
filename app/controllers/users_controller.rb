@@ -19,6 +19,14 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+  def show_favorite
+    @user = User.find(params[:id])
+    @my_facility = MyFacility.find(params[:id])
+
+    favorites = Favorite.where(user_id: current_user.id).pluck(:my_facility_id)  # ログイン中のユーザーのお気に入りのpost_idカラムを取得
+    @favorite_list = MyFacility.find(favorites)     # postsテーブルから、お気に入り登録済みのレコードを取得
+  end
 
   private
 

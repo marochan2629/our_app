@@ -2,6 +2,9 @@ class MyFacility < ApplicationRecord
   mount_uploader :top_image, TopImageUploader
   has_many :reviews, dependent: :destroy
   belongs_to :facility
+  has_many :favorites, foreign_key: 'my_facility_id', dependent: :destroy     # 記事/お気に入り → 1:多
+  belongs_to :user, optional: true
+  has_many :users, through: :favorites
   default_scope -> { order(created_at: :desc) }
   with_options presence: true do
   validates :facility_name

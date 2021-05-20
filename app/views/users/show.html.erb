@@ -1,1 +1,29 @@
+<div class="user_mypage">
+  <div class="beautiful_image">
+    <p>ここに綺麗な画像を表示</p>
+  </div>
+  <div class="user_info">
+    <p>ここにユーザーのトップ画像を表示</p>
+    <div class="user_name">
+      <p>ここに名前</p>
+      <p>マイページ更新リンク</p>
+    </div>
+  </div>
+  
+  <div class="favorite_place">
+    <input id="tab01" type="radio" name="tabinput" checked>
+    <input id="tab02" type="radio" name="tabinput">
+
+    <ul class="tabnav">
+      <li><label class="tabnav01" for="tab01">お気に入り</label></li>
+      <li><label class="tabnav02" for="tab02">マイレビュー</label></li>
+    </ul>
+
+    <div class="tabcontent">
+      <div id="tabcontent01">タブ1の内容</div>
+      <div id="tabcontent02">タブ2の内容<br>タブ2の内容</div>
+    </div>
+  </div>
+</div>
+
 <%= @user.name %>, <%= @user.email %>

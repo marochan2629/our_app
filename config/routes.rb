@@ -42,4 +42,5 @@ Rails.application.routes.draw do
   resources :my_facilities, only:[:create, :destroy, :show] do
     resources :reviews, only: [:index, :create]
   end
+  resources :favorites, only: [:create, :destroy]
 end

@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   has_many :reviews, dependent: :destroy
+  has_many :favorites, dependent: :destroy     # ユーザー/お気に入り → 1:多
+  has_many :my_facilities, through: :favorites
 
   # 渡された文字列のハッシュ値を返す
   def User.digest(string)
@@ -26,5 +28,21 @@ class User < ApplicationRecord
   def remember
     self.remember_token = User.new_token
     update_attribute(:remember_digest, User.digest(remember_token))
+  end
+  
+  #登録メソッド 
+  def add_favorite(my_facility)
+    favorites.find_or_create_by(my_facility_id: my_facility.id)
+  end
+  
+  #登録解除メソッド
+  def remove_favorite(my_facility)
+    favorite = favorites.find_by(my_facility_id: my_facility.id)
+    favorite.destroy if favorite
+  end
+  
+  #確認メソッド
+  def check_favorite?(my_facility)
+    self.my_facilities.include?(my_facility)
   end
 end

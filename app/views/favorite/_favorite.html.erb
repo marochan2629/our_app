@@ -1,0 +1,5 @@
+<div id='favorite'>
+  if !Favorite.exists?(user: current_user, my_facility_id: @my_facility.id)  
+    <%= link_to post_favorites_path(@post), method: :post, remote: true, class: "favorite-btn favorite-post" %> do
+    
+</div>

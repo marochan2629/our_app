@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_28_073342) do
+ActiveRecord::Schema.define(version: 2021_05_19_063034) do
 
   create_table "facilities", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2021_03_28_073342) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.index ["email"], name: "index_facilities_on_email", unique: true
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "my_facility_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["my_facility_id"], name: "index_favorites_on_my_facility_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "my_facilities", force: :cascade do |t|
@@ -51,6 +60,17 @@ ActiveRecord::Schema.define(version: 2021_03_28_073342) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "my_facility_id", null: false
+    t.string "content"
+    t.integer "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["my_facility_id"], name: "index_reviews_on_my_facility_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -61,5 +81,9 @@ ActiveRecord::Schema.define(version: 2021_03_28_073342) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "favorites", "my_facilities"
+  add_foreign_key "favorites", "users"
   add_foreign_key "my_facilities", "facilities"
+  add_foreign_key "reviews", "my_facilities"
+  add_foreign_key "reviews", "users"
 end

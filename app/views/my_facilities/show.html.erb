@@ -35,6 +35,17 @@
   　<%= render 'reviews/form', review: @review, my_facility: @my_facility %>
   　<p>ここにクチコミの一部を掲載</p>
   　<%= link_to "他のレビューを見る", my_facility_reviews_path(@my_facility), class: "button light ml-3 mt-3" %>
+  　<% if current_user.check_favorite?(@my_facility) %>
+      <%= form_with(model: current_user.favorites.find_by(my_facility_id: @my_facility.id), local: true, method: :delete) do |f| %>
+        <%= hidden_field_tag :my_facility_id, @my_facility.id %>
+        <%= f.submit '登録解除', class: 'btn btn-danger' %>
+      <% end %>
+    <% else %>
+      <%= form_with(model: current_user.favorites.build, local: true) do |f| %>
+        <%= hidden_field_tag :my_facility_id, @my_facility.id %>
+        <%= f.submit 'お気に入り登録', class: 'btn btn-primary' %>
+      <% end %>
+    <% end %>
   </div>
   <div class="my_facility_about">
     <table>

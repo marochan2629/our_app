@@ -1,3 +1,42 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* tabnav */
+.tabnav{
+  margin: 0;
+  padding: 0;
+}
+.tabnav li{
+  display: inline;
+}
+.tabnav li label{
+  display: inline-block;
+  background: #405dca;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[name=tabinput]{
+  display: none;
+}
+#tab01:checked ~ .tabnav .tabnav01,
+#tab02:checked ~ .tabnav .tabnav02 {
+  background: #ddd;
+  color: #333;
+}
+
+/* tabcontent */
+.tabcontent{
+  padding: 20px;
+  border: 1px dotted #ccc;
+}
+.tabcontent div{
+  display: none;
+}
+#tab01:checked ~ .tabcontent #tabcontent01,
+#tab02:checked ~ .tabcontent #tabcontent02 {
+  display: block;
+}
