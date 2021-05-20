@@ -18,12 +18,27 @@
       <li><label class="tabnav01" for="tab01">お気に入り</label></li>
       <li><label class="tabnav02" for="tab02">マイレビュー</label></li>
     </ul>
-
     <div class="tabcontent">
-      <div id="tabcontent01">タブ1の内容</div>
-      <div id="tabcontent02">タブ2の内容<br>タブ2の内容</div>
+      <div id="tabcontent01">
+        <% if @favorite_list.present? %>
+          <% @favorite_list.each do |my_facility| %>
+            <%= my_facility.facility_name %>
+            <%= my_facility.kana %>
+          <% end %>
+        <% else %>
+          <p>気になる施設をお気に入り登録しましょう！</p>
+        <% end %>
+      </div>
+      <div id="tabcontent02">
+        <% if @review_list.present? %>
+          <% @review_list.each do |review| %>
+            <%= review.score %>
+            <%= review.content %>
+          <% end %>
+        <% else %>
+          <p>気になる施設をお気に入り登録しましょう！</p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-
-<%= @user.name %>, <%= @user.email %>
